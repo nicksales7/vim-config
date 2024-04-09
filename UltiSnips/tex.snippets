@@ -15,7 +15,7 @@ snippet template "Basic template" b
 \usepackage{transparent}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.18}
+\pgfplotsset{compat=newest}
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{8cm}
@@ -55,6 +55,10 @@ snippet lim "limit" w
 \lim_{${1:n} \to ${2:\infty}}
 endsnippet
 
+snippet log "log" w
+\log_{$1}{($2)}
+endsnippet
+
 snippet sum "sum" w
 \sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
 endsnippet
@@ -78,16 +82,17 @@ snippet plot "Plot" w
             legend style={at={(1.05,1)},anchor=north west},
         ]
             \addplot[domain=$2:$3, samples=${6:100}, $7]{$8};
-            \addlegendentry{$8}             
+            \addlegendentry{$9}             
 		\end{axis}
     \end{tikzpicture}
-    \caption{$9}
-    \label{${10:$9}}
+    \caption{$10}
+    \label{${11:$10}}
 \end{figure}
 endsnippet
 
 snippet addplot "Plot" w
 \addplot[domain=$1:$2, samples=${3:100}, $4]{$5};
+\addlegendentry{$6}     
 endsnippet
 
 snippet fig "Figure environment" b
