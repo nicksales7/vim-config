@@ -4,3 +4,22 @@ snippet beg "begin{} / end{}" bA
 \end{$1}
 endsnippet
 
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet lim "limit" w
+\lim_{${1:n} \to ${2:\infty}}
+endsnippet
+
+snippet sum "sum" w
+\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+endsnippet
+
+snippet part "d/dx" w
+\frac{\partial ${1:V}}{\partial ${2:x}} $0
+endsnippet
+
+snippet dint "integral" wA
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
+endsnippet
