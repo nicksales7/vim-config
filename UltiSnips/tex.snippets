@@ -15,9 +15,10 @@ snippet template "Basic template" b
 \usepackage{transparent}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 \newcommand{\incfig}[1]{%
-    \def\svgwidth{$1}
+    \def\svgwidth{8cm}
     \import{./figures/}{#1.pdf_tex}
 }
 
@@ -26,7 +27,7 @@ snippet template "Basic template" b
 \setlength\parindent{0pt}
 \setlength\parskip{1em}
 
-\title{$2}
+\title{$1}
 \author{Nicholas Sales}
 \date{\today} % This will automatically insert today's date
 
