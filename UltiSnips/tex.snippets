@@ -1,3 +1,45 @@
+snippet template "Basic template" b
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+% Document settings
+\geometry{a4paper, margin=1in}
+\setlength\parindent{0pt}
+\setlength\parskip{1em}
+
+\title{title}
+\author{Nicholas Sales}
+\date{\today} % This will automatically insert today's date
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+	$0
+\end{document}
+endsnippet
+
 snippet beg "begin{} / end{}" bA
 \begin{$1}
 	$0
@@ -23,3 +65,27 @@ endsnippet
 snippet dint "integral" wA
 \int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
 endsnippet
+
+snippet plot "Plot" w
+\begin{figure}[$1]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+			xmin= ${2:-10}, xmax= ${3:10},
+			ymin= ${4:-10}, ymax = ${5:10},
+            axis lines = middle,
+            legend style={at={(1.05,1)},anchor=north west},
+        ]
+            \addplot[domain=$2:$3, samples=${6:100}, $7]{$8};
+            \addlegendentry{$8}             
+		\end{axis}
+    \end{tikzpicture}
+    \caption{$9}
+    \label{${10:$9}}
+\end{figure}
+endsnippet
+
+snippet addplot "Plot" w
+\addplot[domain=$1:$2, samples=${3:100}, $4]{$5};
+endsnippet
+

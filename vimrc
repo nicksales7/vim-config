@@ -13,8 +13,10 @@ filetype indent on
 
 " Autoclose 
 inoremap ( ()<Esc>i
-inoremap $ $$<Esc>i
 inoremap { {}<Esc>i
+inoremap \( \(\)<Esc>i
+inoremap \{ \{\}<Esc>i
+
 
 " Set encoding to UTF-8
 set encoding=utf-8
@@ -24,8 +26,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-" Show line numbers
+" Show line numbers and set relative numvers
 set number
+set relativenumber
 
 " Highlight the current line
 set cursorline
@@ -107,5 +110,5 @@ call plug#end()
 syntax on
 colorscheme onedark
 
-let g:vimtex_view_method = 'zathura'
+
 
