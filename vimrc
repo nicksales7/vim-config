@@ -4,6 +4,9 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Remap for markdown preview
+nnoremap \mm :CocCommand markdown-preview-enhanced.openPreview<CR>
+
 " Set compatibility to Vim only, ignoring Vi compatibility when possible
 set nocompatible
 
