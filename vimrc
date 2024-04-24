@@ -94,8 +94,8 @@ let g:vimtex_view_method='zathura'
 set conceallevel=1
 let g:tex_conceal='abdmg'
 
-" Onedark Theme
-Plug 'joshdick/onedark.vim'
+" Theme
+Plug 'nanotech/jellybeans.vim'
 
 " Ultisnips
 Plug 'SirVer/ultisnips'
@@ -111,7 +111,4 @@ call plug#end()
 
 " Theme
 syntax on
-colorscheme onedark
-
-
-
+colorscheme jellybeans
