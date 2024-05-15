@@ -5,7 +5,20 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 " Remap for markdown preview
-nnoremap \mm :CocCommand markdown-preview-enhanced.openPreview<CR>
+let g:markdown_preview_active = 0
+
+function! ToggleMarkdownPreview()
+  if g:markdown_preview_active == 0
+    execute 'MarkdownPreview'
+    let g:markdown_preview_active = 1
+  else
+    execute 'MarkdownPreviewStop'
+    let g:markdown_preview_active = 0
+  endif
+endfunction
+
+nnoremap \mm :call ToggleMarkdownPreview()<CR>
+
 
 " Set compatibility to Vim only, ignoring Vi compatibility when possible
 set nocompatible
@@ -106,6 +119,9 @@ let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Markdown viewer
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 call plug#end()
 
