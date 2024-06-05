@@ -29,6 +29,7 @@ filetype indent on
 
 " Autoclose 
 inoremap ( ()<Esc>i
+inoremap ' ''<Esc>i
 inoremap [ []<Esc>i
 inoremap { {}<Esc>i
 inoremap \( \(\)<Esc>i
