@@ -1,6 +1,12 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =4
-let g:netrw_dirhist_4='/home/nick/.config/zathura'
-let g:netrw_dirhist_3='/home/nick/Documents/Latex'
-let g:netrw_dirhist_2='/home/nick/.vim/vimrc'
-let g:netrw_dirhist_1='/home/nick/Documents/Latex'
+let g:netrw_dirhist_4='/home/nickarch'
+let g:netrw_dirhist_3='/home/nickarch/.vim'
+let g:netrw_dirhist_2='/home/nickarch/.vim/plugged'
+let g:netrw_dirhist_1='/home/nickarch/Programming/compiler-in-zig'
+let g:netrw_dirhist_0='/home/nickarch/Programming/tinygrad'
+let g:netrw_dirhist_9='/SPCC/nicksvault'
+let g:netrw_dirhist_8='/home/nickarch/Programming/gas-second-law/.git'
+let g:netrw_dirhist_7='/home/nickarch/.config/i3'
+let g:netrw_dirhist_6='/home/nickarch/Programming/gas-second-law'
+let g:netrw_dirhist_5='/SPCC/nicksvault'

@@ -125,6 +125,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Markdown viewer
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
+" Zig vim
+Plug 'ziglang/zig.vim'
+
+" Coq
+Plug 'whonore/Coqtail'
+
 call plug#end()
 
 " Theme
