@@ -27,6 +27,12 @@ set nocompatible
 filetype plugin on
 filetype indent on
 
+" Map hjkl to move in insert mode
+inoremap <C-h> <C-o>h
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-l> <C-o>l
+
 " Autoclose 
 inoremap ( ()<Esc>i
 inoremap ' ''<Esc>i
