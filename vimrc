@@ -26,36 +26,6 @@ set nocompatible
 filetype plugin on
 filetype indent on
 
-" Map hjkl to move in insert mode
-inoremap <C-h> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
-inoremap <C-l> <C-o>a
-
-" Unbind arrow keys in normal mode
-nnoremap <Up> <Nop>
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-
-" Unbind arrow keys in insert mode
-inoremap <Up> <Nop>
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-
-" Unbind arrow keys in visual mode
-vnoremap <Up> <Nop>
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
-
-" Unbind arrow keys in command-line mode
-cnoremap <Up> <Nop>
-cnoremap <Down> <Nop>
-cnoremap <Left> <Nop>
-cnoremap <Right> <Nop>
-
 " Autoclose 
 inoremap ( ()<Esc>i
 inoremap ' ''<Esc>i
