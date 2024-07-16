@@ -111,18 +111,16 @@ let g:tex_conceal='abdmg'
 " Theme
 Plug 'nanotech/jellybeans.vim'
 
-" Ultisnips
-Plug 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
-
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Coq
 Plug 'whonore/Coqtail'
+
+" Lean
+Plug 'Julian/lean.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
 
 call plug#end()
 
