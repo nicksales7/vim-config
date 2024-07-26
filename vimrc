@@ -4,27 +4,25 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Remap for markdown preview
-let g:markdown_preview_active = 0
-
-function! ToggleMarkdownPreview()
-  if g:markdown_preview_active == 0
-    execute 'MarkdownPreview'
-    let g:markdown_preview_active = 1
-  else
-    execute 'MarkdownPreviewStop'
-    let g:markdown_preview_active = 0
-  endif
-endfunction
-
-nnoremap \mm :call ToggleMarkdownPreview()<CR>
-
 " Set compatibility to Vim only, ignoring Vi compatibility when possible
 set nocompatible
 
 " Enable file type detection and plugin system
 filetype plugin on
 filetype indent on
+
+" Ensure netrw is loaded
+runtime! plugin/netrwPlugin.vim
+
+" Mapping to create a new :Explore tab to the left
+function! OpenExploreTab()
+    execute "leftabove vsplit"
+    execute "wincmd L"  
+    execute "Explore"
+    execute "wincmd T"
+endfunction
+
+nnoremap <Leader>e :call OpenExploreTab()<CR>
 
 " Autoclose 
 inoremap ( ()<Esc>i

@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/nick/.vim'
+let g:netrw_dirhist_5='/home/nick/Programming/gas-second-law'
 let g:netrw_dirhist_4='/home/nick/Programming/ubuntu-setup-scripts'
 let g:netrw_dirhist_3='/home/nick/.config/i3'
 let g:netrw_dirhist_2='/home/nick/Programming/sandboxes'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_0='/home/nick/.config/i3'
 let g:netrw_dirhist_9='/home/nick/Programming/sandboxes'
 let g:netrw_dirhist_8='/home/nick/.vim'
 let g:netrw_dirhist_7='/home/nick/.config/i3'
-let g:netrw_dirhist_6='/mnt/SPCC/nicksvault'
-let g:netrw_dirhist_5='/etc/systemd/system'
